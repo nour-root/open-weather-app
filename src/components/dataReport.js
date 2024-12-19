@@ -1,12 +1,13 @@
 const dataResponse = (
-	temperature,
-	weatherType,
-	location,
-	feelsLike,
-	humidity
+  icon,
+  temperature,
+  weatherType,
+  location,
+  feelsLike,
+  humidity
 ) => {
-	return `
-<div class="w-full my-5 bg-white rounded-md">
+  return `
+<div class="w-full my-5 bg-blue-200 rounded-md">
   <div
     class="border-b-[1px] border-slate-400 p-5 flex items-center gap-3"
   >
@@ -15,10 +16,10 @@ const dataResponse = (
     </button>
     <h2 class="text-xl text-sky-blue font-bold">Weather App</h2>
   </div>
-  <div class="p-5 py-8 flex flex-col gap-5">
-    <img src="/assets/cloud.png" class="w-1/2 mx-auto" alt="" />
+  <div class="p-5 py-8 flex flex-col gap-2">
+    <img src=" https://openweathermap.org/img/wn/${icon}.png" class="w-[120px]  mx-auto" alt="" />
     <div class="flex flex-col items-center gap-[1.5px]">
-      <h3 class="text-6xl font-semibold">${temperature}°C</h3>
+      <h3 class="text-4xl font-semibold">${temperature}°C</h3>
       <p class="text-xl font-medium">${weatherType}</p>
       <p class="text-lg font-medium">
         <div class="flex gap-1">
@@ -32,16 +33,16 @@ const dataResponse = (
     <div
       class="flex-1 flex items-center justify-center py-4 border-r-[1px] border-r-slate-400"
     >
-      <img src="/assets/temperature.svg" class="w-[50px]" alt="" />
+      <img src="/assets/temperature.svg" class="w-[40px]" alt="" />
       <div class="flex flex-col ml-2">
         <div class="font-semibold text-xl">${feelsLike}°C</div>
         <span class="text-sm font-semibold">Feels Like</span>
       </div>
     </div>
     <div class="flex-1 flex items-center justify-center py-4">
-      <img src="/assets/humidity.svg" class="w-[45px]" alt="" />
+      <img src="/assets/humidity.svg" class="w-[40px]" alt="" />
       <div class="flex flex-col ml-2">
-        <div class="font-semibold text-xl">${humidity}</div>
+        <div class="font-semibold text-xl">${humidity}%</div>
         <span class="text-sm font-semibold">Humidity</span>
       </div>
     </div>
