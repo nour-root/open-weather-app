@@ -7,8 +7,76 @@
     <link rel="stylesheet" href="/src/style.css" />
     <title>Vite App</title>
   </head>
-  <body>
-    <main id="root"></main>
+  <body class="bg-sky-blue">
+    <main
+      id="root"
+      class="min-h-dvh container mx-auto max-w-sm flex items-center justify-center px-2 sm:px-0"
+    >
+      <div class="w-full my-5 bg-white rounded-md">
+        <div
+          class="border-b-[1px] border-slate-400 p-5 flex items-center gap-3"
+        >
+          <img src="./public/assets/arrow-left.svg" class="w-[25px] cursor-pointer" alt="" />
+          <h2 class="text-xl text-sky-blue font-bold">Weather App</h2>
+        </div>
+        <div class="p-5 py-8 flex flex-col gap-5">
+          <img src="/assets/cloud.png" class="w-1/2 mx-auto" alt="" />
+          <div class="flex flex-col items-center gap-[1.5px]">
+            <h3 class="text-6xl font-semibold">13°C</h3>
+            <p class="text-xl font-medium">Broken Clouds</p>
+            <p class="text-lg font-medium">
+              <div class="flex gap-1">
+                <img src="/assets/location.svg" class="w-[20px]" alt="" />
+                <span class="text-lg font-medium">Tartous, Syria</span>
+              </div>
+            </p>
+          </div>
+        </div>
+        <div class="border-t-[1px] border-t-slate-400 flex">
+          <div
+            class="flex-1 flex items-center justify-center py-4 border-r-[1px] border-r-slate-400"
+          >
+            <img src="/assets/tempereture.svg" class="w-[50px]" alt="" />
+            <div class="flex flex-col ml-2">
+              <div class="font-semibold text-xl">13°C</div>
+              <span class="text-sm font-semibold">Feels Like</span>
+            </div>
+          </div>
+          <div class="flex-1 flex items-center justify-center py-4">
+            <img src="/assets/humidity.svg" class="w-[45px]" alt="" />
+            <div class="flex flex-col ml-2">
+              <div class="font-semibold text-xl">84%</div>
+              <span class="text-sm font-semibold">Humidity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+
+<!-- <div class="w-full my-5 bg-white rounded-md">
+    <div class="border-b-[1px] border-slate-400 p-5">
+      <h2 class="text-xl text-sky-blue font-bold">Weather App</h2>
+    </div>
+    <div class="p-5 py-8 flex flex-col gap-5">
+      <input
+        type="text"
+        name="city"
+        id="city"
+        class="text-center text-lg py-3 w-full rounded-md border-[1px] border-slate-400"
+        placeholder="Enter City Name"
+      />
+      <div class="flex items-center gap-3">
+        <hr class="w-full border-t-slate-400" />
+        <span class="text-slate-400 text-lg"> or </span>
+        <hr class="w-full border-t-slate-400" />
+      </div>
+      <button
+        class="w-full py-3 rounded-md text-lg text-center text-white bg-sky-blue"
+      >
+        Get Device Location
+      </button>
+    </div>
+  </div> -->
