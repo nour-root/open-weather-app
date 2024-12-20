@@ -4,10 +4,11 @@ import loaderIcon from "./components/loader";
 import startScreen from "./components/startScreen";
 import accessGeoLocationAPI from "./service/accessGeoLocationAPI.service";
 import fetchOpenWeatherDataByCoords from "./service/fetchOpenWeatherDataByCoords.service";
+import getWeatherByCountry from "./service/getWeatherByCountry.service";
 
 const container = document.getElementById("root");
 
-const handleFetchData = (data = { latitude: 0, longitude: 0 }) => {
+const handleFetchData = (data = { lon: 0, lat: 0 }) => {
   container.innerHTML = loaderIcon();
   fetchOpenWeatherDataByCoords(data)
     .then(async (res) => {
@@ -40,7 +41,9 @@ const init = () => {
   const handleSearch = document.getElementById("use-search");
 
   handleSearch.addEventListener("click", () => {
-    console.log(cityInput.value);
+    getWeatherByCountry(cityInput.value).then((data) => {
+      handleFetchData(data);
+    });
   });
 
   useLocationBtn.addEventListener("click", () => {
