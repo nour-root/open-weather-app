@@ -8,7 +8,7 @@ import getWeatherByCountry from "./service/getWeatherByCountry.service";
 
 const container = document.getElementById("root");
 
-const handleFetchData = (data = { lon: 0, lat: 0 }) => {
+const handleFetchData = (data = { latitude: 0, longitude: 0 }) => {
   container.innerHTML = loaderIcon();
   fetchOpenWeatherDataByCoords(data)
     .then(async (res) => {
